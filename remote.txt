@@ -1,0 +1,68 @@
+Push & Pull:
+
+1. git clone
+
+2. git commit
+   git checkout o/main
+   git commit
+
+3. git fetch
+
+4. git pull
+
+5. git clone
+   git fakeTeamwork main 2
+   git commit
+   git pull
+
+6. git commit
+   git commit
+   git push
+
+7. git fakeTeamwork
+   git commit
+   git pull --rebase
+   git push
+
+8. git checkout -b feature
+   git push
+   git branch -f main C1
+
+Через origin – к звёздам:
+
+1. git fetch
+   git rebase o/main side1
+   git rebase side1 side2
+   git rebase side2 side3
+   git rebase side3 main
+   git push
+
+2. git fetch
+   git checkout main
+   git merge side1
+   git merge side2
+   git merge side3
+   git checkout main
+   git push
+
+3. git checkout -b side o/main
+   git commit
+   git pull --rebase
+   git push
+
+4. git push origin main
+   git push origin foo
+
+5. git push origin main^:foo
+   git push origin foo:main
+
+6. git fetch origin main^:foo
+   git fetch origin foo:main
+   git checkout foo
+   git merge main
+
+7. git push origin :foo
+   git fetch origin :bar
+
+8. git pull origin bar:foo
+   git pull origin main:side
